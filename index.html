@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+<div class="w-75 mx-auto py-4">
+    <h3 class="py-3 fw-bolder">Product Managment System</h3>
+<label for="productNameInput" class="py-3">productName :</label>
+<input type="text" oninput="validateproductName()"   class="form-control mb-4" id="productNameInput">
+<p  id="demo" class=" alert-danger p-2 d-none"> name is requierd</p>
+
+<label for="productpriceInput" class="py-3">productprice:</label>
+<input type="number" oninput="validateproductprice()" class="form-control mb-4" id="productpriceInput">
+<p  id="demo1" class=" alert-danger p-2 d-none"> price is requierd</p>
+
+<label for="productcountInput" class="py-3">productcount:</label>
+<input type="number" class="form-control mb-4" id="productcountInput">
+
+
+<label for="productcategoryinput" class="py-3">productcategory :</label>
+<input type="text" class="form-control mb-4" id="productcategoryinput">
+
+
+<label for="productDescriptionInput" class="py-3">productDescription :</label>
+<textarea type="text" class="form-control mb-4" id="productDescriptionInput"></textarea>
+
+
+<button id="addBtn" onclick="add()" class="btn  btn-outline-info ">Add Product</button>
+
+</div>
+
+<div  class="w-75 mx-auto  p-4" >
+
+ <label for="search">search :</label>
+   
+<input oninput="searchproducts(this.value)" class="form-control" id="search" type="text" placeholder="search by name ">
+
+</div>
+
+
+
+<table class="table w-75 mx-auto mt-3 text-center ">
+    <thead>
+<th>index</th>
+<th>productName</th>
+<th>productprice</th>
+<th>productcount</th>
+
+<th>productcategory</th>
+<th>productDesc</th>
+<th>increase</th>
+<th>decrease</th>
+
+<th>update</th>
+<th>delete</th>
+
+    </thead>
+    <tbody id="tableBody">
+      
+    </tbody>
+</table>
+
+<script src="js/mein.js"></script>
+</body>
+</html>
